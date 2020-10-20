@@ -7,7 +7,7 @@ class LocationSpider(scrapy.Spider):
 
     def start_requests(self):
         df = pd.read_csv('University_Dataset.csv')
-        vals = df['University'][330:340].tolist()
+        vals = df['University'].tolist()
         # vals = ["srtmu", "srtmu"]
         for val in vals:
             yield scrapy.Request(url="https://www.google.com/search?q="+val, dont_filter=True)
