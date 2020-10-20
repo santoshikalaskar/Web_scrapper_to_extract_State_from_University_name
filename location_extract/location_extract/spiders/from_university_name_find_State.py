@@ -6,7 +6,7 @@ class LocationSpider(scrapy.Spider):
     name = "state_location2"
 
     def start_requests(self):
-        df = pd.read_csv('Spacy Dataset.csv')
+        df = pd.read_csv('University_Dataset.csv')
         vals = df['University'][330:340].tolist()
         # vals = ["srtmu", "srtmu"]
         for val in vals:
